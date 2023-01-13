@@ -45,14 +45,15 @@ h5,
 h6,
 body {
     margin: 0;
+    font-size: inherit;
 }
 
 body {
     min-width: 320px;
     overflow-x: hidden;
     position: relative;
+    color: $default;
     /* font */
-    color: rgba(54, 56, 56, 0.9);
     font-size: 16px;
     line-height: 27px;
     font-weight: 400;
