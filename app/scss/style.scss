@@ -313,6 +313,11 @@
     grid-gap: 30px;
     &__item {
         position: relative;
+        &:hover {
+            .collection__info {
+                opacity: 1;
+            }
+        }
     }
     &__images {
         min-height: 350px;
@@ -330,12 +335,33 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        opacity: 0;
+        transition: all 0.4s;
     }
     &__info-title {
         font-size: 20px;
         line-height: 25px;
         @extend %title-font;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: 2px;
+            width: 80%;
+            background-color: $light-grey;
+        }
+    }
+    &__info-text {
+        font-weight: 600;
+        font-size: 14px;
+        color: $grey;
     }
 }
 
-// 3:39:00
+//
