@@ -364,4 +364,33 @@
     }
 }
 
+.decor {
+    padding: 170px 0 155px;
+    background-image: url(../images/decor-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__title {
+        max-width: 730px;
+        color: $black;
+        font-size: 60px;
+        line-height: 80px;
+        margin-bottom: 22px;
+        padding-bottom: 22px;
+        @extend %title-font;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 2px;
+            background-color: $light-grey;
+        }
+    }
+    &__text {
+        max-width: 540px;
+    }
+}
+
 //
