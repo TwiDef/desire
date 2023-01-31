@@ -15,10 +15,16 @@ $(function() {
         autoplaySpeed: 3000
     });
 
-    const mixer = mixitup('.gallery__inner', {
-        load: {
-            filter: '.living'
-        }
-    });
+
+    const containerEl = document.querySelector('.gallery__inner');
+    let mixer;
+
+    if (containerEl) {
+        mixer = mixitup('.gallery__inner', {
+            load: {
+                filter: '.living'
+            }
+        });
+    }
 
 });
