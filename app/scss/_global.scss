@@ -113,3 +113,22 @@ body {
         }
     }
 }
+
+.info-email {
+    font-weight: 600;
+    color: $black;
+    font-size: 14px;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/footer-icons/envelope.svg);
+        left: 0;
+        top: 7px;
+        width: 16px;
+        height: 12px;
+    }
+}
