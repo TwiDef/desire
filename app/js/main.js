@@ -15,6 +15,14 @@ $(function() {
         autoplaySpeed: 3000
     });
 
+    $('.contact-slider').slick({
+        slidesPerRow: 10,
+        dots: true,
+        arrows: false,
+        /*         autoplay: true, */
+        autoplaySpeed: 3000
+    });
+
 
     const containerEl = document.querySelector('.gallery__inner');
     let mixer;
