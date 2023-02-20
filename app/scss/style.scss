@@ -731,7 +731,7 @@
         padding-left: 284px;
         display: flex;
     }
-    &__social-item + .contact__social-item {
+    &__social-item+.contact__social-item {
         padding-left: 40px;
         margin-bottom: 20px;
     }
@@ -1014,7 +1014,8 @@
         margin: 0 6px;
     }
     &__arrow--disabled {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
     &__list-num {
         font-weight: 600;
@@ -1026,4 +1027,81 @@
     }
 }
 
-//
+.blog-one__item {
+    p {
+        margin-bottom: 40px;
+    }
+    blockquote {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 30px;
+        padding: 0 40px;
+    }
+    .blog__blockquot-author::before {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+.blog-one {
+    &__tags {
+        margin-bottom: 30px;
+    }
+    &__tags-title {
+        color: $black;
+        @extend %title-font;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 14px;
+    }
+    &__tags-link {
+        margin-bottom: 10px;
+        margin-right: 23px;
+        padding: 0 16px;
+        font-size: 14px;
+        color: $light-grey;
+        border: 1px solid $light-grey;
+        border-radius: 14px;
+        display: inline-block;
+    }
+    &__links {
+        padding: 40px 0 32px;
+        border-top: 1px solid $footer-bg;
+        border-bottom: 1px solid $footer-bg;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        width: 242px;
+        position: relative;
+        font-size: 14px;
+        font-weight: 600;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 23px;
+        }
+    }
+    &__link-prev {
+        padding-left: 44px;
+        &::before {
+            background-image: url(./../images/links/left.svg);
+            left: 0;
+        }
+    }
+    &__link-next {
+        padding-right: 44px;
+        &::before {
+            background-image: url(./../images/links/right.svg);
+            right: 0;
+        }
+        text-align: right;
+    }
+}
+
+// 10:32:40
